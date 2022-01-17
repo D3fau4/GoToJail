@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GoToJail": {
+      "commandName": "Project",
+      "commandLineArgs": "--build \"C:\\Users\\raul2\\source\\repos\\GoToJail\\GoToJail\\bin\\Debug\\net6.0\\OUT_PO\\comname_00_00.utf8.po\""
+    }
+  }
+}
