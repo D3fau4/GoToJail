@@ -46,7 +46,14 @@ namespace GoToJail // Note: actual namespace depends on the project name.
                         writer.Write(str, true, Encoding.UTF8);
                     }
                     writer.WritePadding(0x0, 16);
-                    writer.Stream.WriteTo(Path.GetFileName(args[1]).Replace(".po", ""));
+
+                    if (!Directory.Exists("OUT_UTF8"))
+                        Directory.CreateDirectory("OUT_UTF8");
+                    writer.Stream.WriteTo(Path.Combine("OUT_UTF8", Path.GetFileName(args[1]).Replace(".po", "")));
+                    break;
+                default:
+                    Console.WriteLine("--extract [UTF8 file]");
+                    Console.WriteLine("--build [Generated PO]");
                     break;
             }
         }
